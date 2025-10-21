@@ -358,6 +358,7 @@ display(people_education.head(20))
 ```
 round(1-people_education['instituition'].nunique() / len(people_education['instituition']),2)
 ```
+Доля сотрудников без информации об образовании - 0.92
 **Посчитаем долю сотрудников без инфрмации об образовании по компаниям**
 ```
 people_education['education_share'] = round((1 - people_education.groupby('company_id')['instituition'].transform('nunique')
