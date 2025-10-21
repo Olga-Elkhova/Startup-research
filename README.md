@@ -642,6 +642,8 @@ plt.xlabel('Размеры финансирования (log10)')
 plt.ylabel('Частота')
 plt.show()
 
+![Размеры_финансирования](https://github.com/Olga-Elkhova/Startup-research/blob/main/Размеры_финансирования.png)
+
 # Построим boxplot для оценки данных
 plt.figure(figsize=(10, 2))
 sns.boxplot(x=np.log10(company_filtered['funding_total'] + 1), color='skyblue')
@@ -650,6 +652,8 @@ plt.xlabel('log10(funding_total)')
 plt.grid()
 plt.show()
 ```
+![Boxplot_финансирования](https://github.com/Olga-Elkhova/Startup-research/blob/main/Boxplot_финансирования.png)
+
 Теперь значения распределились так:
  
 - min = 291 , max = 5.7 млрд.
@@ -694,6 +698,8 @@ plt.xlabel('Размеры финансирования (log10)')
 plt.ylabel('Частота')
 plt.show()
 
+![Размеры_финансирования_дешевых_стартапов](https://github.com/Olga-Elkhova/Startup-research/blob/main/Размеры_финансирования_дешевых_стартапов.png)
+
 # Построим boxplot для оценки данных
 plt.figure(figsize=(10, 2))
 
@@ -704,6 +710,7 @@ plt.xlabel('log10(funding_total)')
 plt.grid()
 plt.show()
 ```
+![Boxplot_финансирования_дешевых_стартапов](https://github.com/Olga-Elkhova/Startup-research/blob/main/Boxplot_финансирования_дешевых_стартапов.png)
 
 Значения финансирования дешевых стартапов распределились так:
  
@@ -781,6 +788,9 @@ plt.ylabel('Частота')
 
 plt.show()
 ```
+![Распределение стоимости_стартапов](https://github.com/Olga-Elkhova/Startup-research/blob/main/Распределение стоимости_стартапов.png)
+
+
 **Построим boxplot для оценки данных**
 ```
 plt.figure(figsize=(10, 2))
@@ -791,6 +801,8 @@ plt.xlabel('log10(funding_total)')
 plt.grid()
 plt.show()
 ```
+![Boxplot_стоимости_стартапов](https://github.com/Olga-Elkhova/Startup-research/blob/main/Boxplot_стоимости_стартапов.png)
+
 Поскольку у нас нет явных критериев от заказчика для разбиения по ценам стартапов, то примем такую категоризацию:
 - Малые < 1 млн,
 - Средние 1 млн - 10 млн,
@@ -825,6 +837,8 @@ sns.set_style("whitegrid")
 plt.figure(figsize=(16, 16))
 plt.show()
 ```
+![Средние_цены_на_стартапы](https://github.com/Olga-Elkhova/Startup-research/blob/main/Средние_цены_на_стартапы.png)
+
 Наибольшие средние цены за стартапы в категории Гиганты.
 
 **Разделим цены стартапов c нулевыми ценами по категориям:**
@@ -853,6 +867,8 @@ sns.set_style("whitegrid")
 plt.figure(figsize=(16, 16))
 plt.show()
 ```
+![Разброс_цен_на_стартапы](https://github.com/Olga-Elkhova/Startup-research/blob/main/Разброс_цен_на_стартапы.png)
+
 Наибольший разброс цен в категории  Гиганты.
 
 Наибольший интерес по цене представляют крупные компании, но при этом они же связаны с большими рисками, так как имеют больший разброс цен.
@@ -888,6 +904,8 @@ sns.set_style("whitegrid")
 plt.figure(figsize=(16, 16))
 plt.show()
 ```
+![Среднее_число_раундов_финансирования](https://github.com/Olga-Elkhova/Startup-research/blob/main/Среднее_число_раундов_финансирования.png)
+
 До стадии IPO доходят только самые успешные стартапы и соответственно число раундов финансирования, как правило, больше чем у остальных стадий развития стартапов.
 Наибольшее среднее количество раундов в категории купленных компаний acquired и со статусом ipo - вышедших на фондовый рынок.
 
