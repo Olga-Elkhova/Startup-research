@@ -267,31 +267,37 @@ investment.drop_duplicates()
 ```
 pd.DataFrame(round(company_and_rounds.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
+![Пропуски_company_and_rounds](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_company_and_rounds.png)
 **Посчитаем долю пропусков в датафрейме acquisition**
 ```
 pd.DataFrame(round(acquisition.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
+![Пропуски_acquisition](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_acquisition.png)
 **Посчитаем долю пропусков в датафрейме education**
 ```
 pd.DataFrame(round(education.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
+![Пропуски_education](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_education.png)
 **Посчитаем долю пропусков в датафрейме people**
 ```
 pd.DataFrame(round(people.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
+![Пропуски_people](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_people.png)
 **Посчитаем долю пропусков в датафрейме degrees**
 ```
 pd.DataFrame(round(degrees.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
+![Пропуски_degrees](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_degrees.png)
 **Посчитаем долю пропусков в датафрейме fund**
 ```
 pd.DataFrame(round(fund.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
+![Пропуски_fund](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_fund.png)
 **Посчитаем долю пропусков в датафрейме investment**
 ```
 pd.DataFrame(round(investment.isna().mean()*100, 2)).sort_values(by=0, ascending=False).style.background_gradient('coolwarm')
 ```
-
+![Пропуски_investment](https://github.com/Olga-Elkhova/Startup-research/blob/main/Пропуски_investment.png)
 В датафрейме `company_and_rounds` пропуски связаны, скорее всего, с присоединением другой таблицы (это видно по названиям столбцов). Также пропуски в датах закрытия компании, вехах финансирования логичны, если компания еще не закрыта или прошла веху финансирования.
  
 Пропуски в `acquisition` могут быть связаны с отсутствием этих данных у заказчика. 
