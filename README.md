@@ -123,7 +123,7 @@ def lookup_datasets(dfs, filenames=None):
 ```
 column_counts = lookup_datasets(dfs.values(), dfs.keys())
 ```
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Датафреймы_1](https://github.com/Olga-Elkhova/Startup-research/blob/main/Датафреймы_1.png)
 
 **В датафрейме `company_and_rounds` содержится информация о компаниях и раундах финансирования.**
 - всего 217774 строк, 22 столбца
