@@ -20,16 +20,15 @@
 
 ```
 import pandas as pd
-```
 
-**Загружаем библиотеки для визуализации данных**
-```
+# Загружаем библиотеки для визуализации данных**
+
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-```
-**Загружаем библиотеку для расчёта коэффициента корреляции phi_k**
-```
+
+#Загружаем библиотеку для расчёта коэффициента корреляции phi_k**
+
 try:
     import phik
 except ModuleNotFoundError as e:
@@ -44,9 +43,8 @@ except ModuleNotFoundError as e:
 Записывем базовую часть в переменную 
 ```
 base_url = "https://code.s3....."
-```
-**Создаем датафремы с использованием переменной**
-```
+
+# Создаем датафремы с использованием переменной
 company_and_rounds = pd.read_csv(base_url + 'company_and_rounds.csv')
 acquisition = pd.read_csv(base_url + 'acquisition.csv')
 degrees = pd.read_csv(base_url + 'degrees.csv')
@@ -56,25 +54,20 @@ investment = pd.read_csv(base_url + 'investment.csv')
 people = pd.read_csv(base_url + 'people.csv')
 ```
 **Приведем к единому стилю написания названий столбцов**
-
-Переименуем столбец company  ID
 ```
+# Переименуем столбец company  ID
 company_and_rounds = company_and_rounds.rename(columns={'company  ID': 'id'})
-```
-**Приведем столбцы в company_and_rounds к стилю snake case**
-```
+
+# Приведем столбцы в company_and_rounds к стилю snake case
 company_and_rounds.columns = company_and_rounds.columns.str.replace('  ','_')
-```
-**Выведем названия столбцов после изменений**
-```
+
+# Выведем названия столбцов после изменений
 company_and_rounds.columns
-```
-**Создаем список названий файлов**
-```
+
+# Создаем список названий файлов
 filenames = ['company_and_rounds.csv', 'acquisition.csv', 'degrees.csv', 'education.csv', 'fund.csv', 'investment.csv', 'people.csv']
-```
-**Создаем список датафреймов**
-```
+
+# Создаем список датафреймов
 dfs = {file: pd.read_csv(base_url + file) for file in filenames}
 ```
 **Выведем информацию о датафреймах**
